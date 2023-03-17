@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css3-div-centering</title>
+</head>
+<style type="text/css">
+  .container.with.flexbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container.with.position{
+    position: relative;
+  }
+  .container.with.position .child{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .container.with.tables{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .container.with.tables .child{
+    display: inline-block;
+  }
+  .container.margin.with.grid{
+    display: grid;
+  }
+  .container.margin.with.grid .child{
+    margin: auto;
+  }
+  .container.with.grid{
+    display: grid;
+    place-items: center;
+  }
+  .container.margin.with.flex{
+    display: flex;
+  }
+  .container.margin.with.flex .child{
+    margin: auto;
+  }
+</style>
+<body>
+  <!-- With Flexbox -->
+  <div class="container with flexbox">
+    <div class="child"></div>
+  </div>
+  <!-- With Position -->
+  <div class="container with position">
+    <div class="child"></div>
+  </div>
+  <!-- With Tables -->
+  <div class="container with tables">
+    <div class="child"></div>
+  </div>
+  <!-- Margin with grid -->
+  <div class="container margin with grid">
+    <div class="child"></div>
+  </div>
+  <!-- With Grid -->
+  <div class="container with grid">
+    <div class="child"></div>
+  </div>
+  <!-- Margin with flex -->
+  <div class="container margin with flex">
+    <div class="child"></div>
+  </div>
+</body>
+</html>
